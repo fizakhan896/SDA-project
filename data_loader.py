@@ -15,7 +15,7 @@ def load_data():
         print("COLUMNS FOUND:", list(data.columns))
 
         if data.empty:
-            print("⚠️ Data file is empty")
+            print("Data file is empty")
 
         # CLEANING (IMPORTANT)
         data = data.dropna(subset=["Value"])
