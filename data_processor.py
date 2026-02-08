@@ -8,6 +8,8 @@ def validate_inputs(data, config):
     if config["operation"] not in ["sum", "average"]:
         raise ValueError("Invalid operation")
 
+
+# FILTER ONLY BY CONFIG (used for computation)
 def filter_data(data, region, year):
     rows = data.to_dict(orient="records")
 
@@ -20,6 +22,8 @@ def filter_data(data, region, year):
 
     return filtered
 
+
+# COMPUTE GDP RESULT
 def calculate_gdp(filtered, operation):
     values = list(map(lambda r: r["Value"], filtered))
 

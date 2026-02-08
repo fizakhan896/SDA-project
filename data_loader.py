@@ -2,11 +2,9 @@ import pandas as pd
 import json
 import os
 
-
 def load_config():
     with open("config.json", "r") as f:
         return json.load(f)
-
 
 def load_data():
     try:
@@ -19,7 +17,13 @@ def load_data():
         if data.empty:
             print("⚠️ Data file is empty")
 
+        # CLEANING (IMPORTANT)
+        data = data.dropna(subset=["Value"])
+        data["Year"] = data["Year"].astype(int)
+        data["Value"] = data["Value"].astype(float)
+
         return data
 
     except Exception as e:
         raise Exception(f"Error loading data: {e}")
+
