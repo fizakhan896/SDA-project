@@ -1,6 +1,5 @@
 {
-    "Region": "Asia",
-    "Year": 2020,
-    "Operation": "average",
-    "Average_GDP": 1523398274308.0908
+    "operation": "average",
+    "countries": 55,
+    "result": 1523398274308.0908
 }
