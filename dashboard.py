@@ -39,7 +39,6 @@ def show_dashboard():
     # Save output
     save_output(result)
 
-    # ✅ PASS FULL DATAFRAME DIRECTLY (THIS FIXES YOUR ERROR)
     region_bar_chart(data)
     region_pie_chart(data)
     year_line_chart(data)
