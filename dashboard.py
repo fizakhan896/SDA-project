@@ -43,4 +43,5 @@ def show_dashboard():
     region_pie_chart(data)
     year_line_chart(data)
     year_histogram(data, config["year"])
-    plt.show()
+
+
